@@ -17,7 +17,9 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // IMPORT ROUTES
+import userRoute from "./routes/user.route.js";
 
 // USING ROUTES
+app.use("/api/v1/users",userRoute);
 
 app.use(errorMiddleware);
